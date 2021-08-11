@@ -1,9 +1,9 @@
 [
-	{
+    {
 		"name":"Metallica",
 		"albums":[
             {
-                "title":"Master of Puppets"
+                "title":"Master of Puppets",
                 "songs"::[
                     {
                         "title":"Battery",
@@ -20,8 +20,9 @@
                     {
                         "title":"Master of Puppets",
                         "duration":"6.32"
-                    },
-               }
-           }
-      }
+                    }
+                ]
+            }
+        ]
+    }
 ]
