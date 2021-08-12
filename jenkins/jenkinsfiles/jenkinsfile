@@ -4,8 +4,16 @@ node {
         git branch: '${branch}', url: 'https://github.com/rakopoul/groovy.git'
     }
     stage('Build') {
-        echo 'Building..'
-        sh 'gcc apps/HelloWorld.cpp -o HelloWorld'
+        try {
+            echo 'Building..'
+            sh 'gcc apps/HelloWorld.cpp -o HelloWorld'
+        } catch(ex) {
+            echo 'Something went wrong'
+            echo ex.toString();
+            currentBuild.result = 'FAILURE'
+        }
+        finally {
+        }
     }
     stage('Test') {
         echo 'Testing..'
