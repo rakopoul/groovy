@@ -9,6 +9,7 @@ node {
     }
     stage('Test') {
         echo 'Testing..'
+        sh './HelloWorld'
     }
     stage('Deploy') {
         echo 'Deploying..'
